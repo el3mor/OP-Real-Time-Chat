@@ -17,18 +17,7 @@ export const viewport : Viewport = {
 export const metadata: Metadata = {
   title: "OP Chat",
   description: "Chat App",
-  manifest: "/manifest.json",
-  authors: [{name:"@opchat"}],
-  icons:[
-    {
-      rel:"apple-touch-icon",
-      url:"icon512_maskable.png"
-    },
-    {
-      rel:"icon",
-      url:"icon512_maskable.png"
-    }
-  ]
+  
 
 };
 
