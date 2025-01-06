@@ -2,8 +2,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { usePathname } from 'next/navigation'
-import { query } from '@/convex/_generated/server'
-import { api } from '@/convex/_generated/api'
+
 
 
 
