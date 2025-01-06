@@ -1,4 +1,4 @@
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 import {useEffect, useState} from 'react'
 import { usePathname } from 'next/navigation'
@@ -9,14 +9,10 @@ import Header from './components/Header'
 import Body from './components/body/Body'
 import Input from './components/input/Input'
 import RemoveFriendDialog from './components/RemoveFriendDialog'
-const Page = ({params : {
-  conversationID
-}} : {
-  params: {
-    conversationID:Id<"conversations">;
-  }
+const Page = ({params  
+  
 }) => {
-  const conversationId = conversationID
+  const {conversationId} = params
   const pathname = usePathname()
   const [removeFriendDialog, setRemoveFriendDialog] = useState(false)
   const [callType, setCallType] =useState<"audio" | "video" | null>(null);
@@ -27,7 +23,7 @@ const Page = ({params : {
       document.querySelector(".main-page")?.classList.add('max-md:hidden')
     } 
   }, [pathname])
-  const conversation = useQuery(api.conversation.get, {id: conversationId})
+  const conversation = useQuery(api.conversation.get, {id: conversationId as Id<"conversations">})
   
   return (
     <div className='h-[calc(100svh-100px)] p-4 rounded-md flex flex-col ring-1 ring-inset ring-gray-200 dark:ring-gray-700 shadow-lg'>

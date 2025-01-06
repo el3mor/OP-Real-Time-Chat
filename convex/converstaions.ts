@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { ConvexError } from "convex/values";
 import { MutationCtx, QueryCtx, query } from "./_generated/server";
 import { getUserByClerkId } from "./_utils";
