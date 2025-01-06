@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 import { useMutationState } from '@/app/hooks/useMutationState'
 import { Form, FormControl, FormField, FormItem } from '@/components/ui/form'

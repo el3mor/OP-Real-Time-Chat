@@ -34,7 +34,7 @@ const CallRoom = ({
 
   console.log(user)
 
-  const { mutate: createMessage, pending } = useMutationState(
+  const { mutate: createMessage } = useMutationState(
     api.message.create
   );
 
@@ -52,6 +52,7 @@ const CallRoom = ({
 
         setToken(data.token);
       } catch (e) {
+        console.log(e)
         toast.error("Could not join the call");
       }
     })();
