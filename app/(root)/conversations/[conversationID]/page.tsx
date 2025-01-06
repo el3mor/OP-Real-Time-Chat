@@ -9,12 +9,14 @@ import Header from './components/Header'
 import Body from './components/body/Body'
 import Input from './components/input/Input'
 import RemoveFriendDialog from './components/RemoveFriendDialog'
-const Page = ({params} : {
+const Page = ({params : {
+  conversationID
+}} : {
   params: {
     conversationID:Id<"conversations">;
   }
 }) => {
-  const conversationId = params.conversationID
+  const conversationId = conversationID
   const pathname = usePathname()
   const [removeFriendDialog, setRemoveFriendDialog] = useState(false)
   const [callType, setCallType] =useState<"audio" | "video" | null>(null);
