@@ -1,5 +1,5 @@
 "use client"
-import { CirclePlus, Loader2 } from 'lucide-react'
+import { Loader2 } from 'lucide-react'
 import { ReactNode } from 'react'
 import { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
@@ -23,7 +23,7 @@ const Layout = ({children} : {children: ReactNode}) => {
       <div className='main-page md:col-span-3 col-span-full rounded-md ring-1 ring-inset ring-gray-200 dark:ring-gray-700 shadow-lg'>
         <div className='p-4 flex justify-between items-center'>
         <h1 className='text-2xl font-extrabold'>Conversations</h1>
-        <button className='ring-1 ring-inset ring-gray-200 dark:ring-gray-700 rounded-md p-2'><CirclePlus /></button>
+       
         </div>
         <div className='flex flex-col p-4 gap-4 mt-5'>
         {converstaions ? (
